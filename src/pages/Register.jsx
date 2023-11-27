@@ -9,13 +9,12 @@ const Register = () => {
   let { name, setName } = useContext(UserInfoContext);
   let { email, setEmail } = useContext(UserInfoContext);
 
+
   const handleSubmit = (event) => {
 
     event.preventDefault();
 
-    if (name !== "" && email !== "") {
-      navigate("/topics");
-    }
+    navigate("/topics");
 
   };
 
@@ -35,6 +34,7 @@ const Register = () => {
               onChange={(e) => setName(e.target.value)}
               type="text"
               placeholder="enter your name"
+              required
             />
 
 
@@ -45,6 +45,7 @@ const Register = () => {
               onChange={(e) => setEmail(e.target.value)}
               type="email"
               placeholder="example@gmail.com"
+              required
             />
 
 
