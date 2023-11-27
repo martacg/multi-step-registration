@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #121826;
+  color: #E5E7EB;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-tap-highlight-color: transparent;
+  font-size: 1rem;
+  background-image: url(./assets/blur-radial.svg), url(./assets/blur-radial.svg);
+  background-position: -50% -50%, 150% 150%;
+  background-repeat: no-repeat, no-repeat;
+}
+
+h1 {
+  font-size: 1.25rem;
+  margin: 15px 0;
+  font-weight: 500;
+}
+
+label {
+  font-size: 0.75rem;
+  color: #A1A1A9;
+}
+
+input {
+  background-color: #212936;
+  border: 2px solid #394150;
+  border-radius: 10px;
+  padding: 12px 15px;
+  color: #394150;
+  margin-bottom: 15px;
+  font-size: 0.75rem;
+}
+
+input:focus,
+input::placeholder {
+  background-color: #212936;
+  color: #394150;
+}
+
+input:focus-visible {
+  outline-width: 0;
+  box-shadow: 0 0 5px rgba(101, 44, 209, 1);
+  color: #A1A1A9;
+}
+
+.action__wrapper {
+  text-align: center;
+}
+
+button {
+  background: rgb(101, 44, 209);
+  background: linear-gradient(0deg, rgba(101, 44, 209, 1) 0%, rgba(132, 94, 238, 1) 100%);
+  border: 0;
+  border-radius: 16px;
+  padding: 10px 30px;
+  color: #E5E7EB;
+  cursor: pointer;
+  font-size: .75rem;
+  margin: 15px 0;
+}
+
+.card {
+  background-color: #212936;
+  border: 1px solid #394150;
+  border-radius: 12px;
+  padding: 33px 30px;
+  width: 100vw;
+  max-width: 450px;
+}
+
+.form-wrapper {
+  flex-direction: column;
+  display: flex;
+  gap: 8px;
+  margin-top: 30px;
+}
+
+.step {
+  font-size: .75rem;
+  color: #394150;
+  margin-top: 18px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.step__list {
+  display: flex;
+  flex-direction: row;
+  margin-left: 15px;
+  margin-top: -2px;
+}
+
+.step__list li {
+  list-style: none;
+}
+
+.step__list span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #394150;
+  border: 0;
+  display: block;
+  border: 5px solid transparent;
+  margin: 5px;
+}
+
+.step__list .before span {
+  background-color: #652CD1;
+  border: 0;
+  display: block;
+  border: 5px solid transparent;
+  margin: 5px;
+}
+
+.step__list .active span {
+  background-color: #773ee5;
+  border: 4px solid #212936c2;
+  width: 18px;
+  height: 18px;
+  margin: 1px;
+}
+
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.checkboxes {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkboxes__row {
+  display: flex;
+}
+
+.checkboxes__row:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.checkboxes__item {
+  padding: 10px 0;
+}
+
+
+.checkbox.style-i {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+.checkbox.style-i input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox.style-i input:checked~.checkbox__checkmark {
+  background-color: #49db44;
+}
+
+.checkbox.style-i input:checked~.checkbox__checkmark:after {
+  transform: rotate(90deg) translateY(-50%) translateX(-50%);
+  background-color: #49db44;
+}
+
+.checkbox.style-i .checkbox__checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  background-color: #ff0070;
+  transition: background-color 0.25s ease;
+  border-radius: 50%;
+}
+
+.checkbox.style-i .checkbox__checkmark:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 80%;
+  height: 12px;
+  border-radius: 6px;
+  transform: rotate(0deg) translateY(-50%) translateX(-50%);
+  transform-origin: left top;
+  background-color: #ff0070;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), -2px -2px 4px rgba(255, 255, 255, 0.6);
+}
+
+.checkbox.style-i .checkbox__body {
+  font-size: .75rem;
+}
+
+.checkbox.style-i input~.checkbox__body {
+  background: #394150;
+  border: 1px solid #4D5562;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.checkbox.style-i input:checked~.checkbox__body {
+  border: 1px solid #845EEE;
+  background-color: #652CD1;
+  font-weight: 500;
+  color: #E5E7EB;
+}
+
+
+.info__user {
+  font-size: 1rem;
+  color: #E5E7EB;
+  margin-bottom: 20px;
+}
+
+.info__user span:first-child {
+  color: #A1A1A9;
+}
+
+.summary h2 {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.topics ul li {
+  margin-left: 30px;
+}
